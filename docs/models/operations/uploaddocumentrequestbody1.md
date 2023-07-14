@@ -1,0 +1,9 @@
+# UploadDocumentRequestBody1
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `Attributes`                                                                                          | [UploadDocumentRequestBodyAttributes](../../models/operations/uploaddocumentrequestbodyattributes.md) | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| `Document`                                                                                            | [UploadDocumentRequestBodyDocument](../../models/operations/uploaddocumentrequestbodydocument.md)     | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
