@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"strings"
 	"tlan-trust-spaces/pkg/models/operations"
+	"tlan-trust-spaces/pkg/models/sdkerrors"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/utils"
 )
@@ -68,6 +69,8 @@ func (s *repository) DownloadDocumentByID(ctx context.Context, request operation
 		switch {
 		case utils.MatchContentType(contentType, `application/octet-stream`):
 			res.DownloadDocumentByID200ApplicationOctetStreamBinaryString = rawBody
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	}
 
@@ -123,6 +126,8 @@ func (s *repository) GetDocumentByID(ctx context.Context, request operations.Get
 			}
 
 			res.GetDocumentByID200ApplicationJSONObject = out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	}
 
@@ -178,6 +183,8 @@ func (s *repository) GetFolderByID(ctx context.Context, request operations.GetFo
 			}
 
 			res.FolderListing = out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	}
 
@@ -230,6 +237,8 @@ func (s *repository) GetSpaces(ctx context.Context) (*operations.GetSpacesRespon
 			}
 
 			res.SpaceList = out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	}
 
@@ -289,6 +298,8 @@ func (s *repository) UploadDocument(ctx context.Context, request operations.Uplo
 			}
 
 			res.UploadDocument201ApplicationJSONObject = out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	}
 

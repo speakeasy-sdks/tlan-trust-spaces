@@ -120,8 +120,8 @@ func New(opts ...SDKOption) *TlanTrustSpaces {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "1.0.0",
-			GenVersion:        "2.65.0",
+			SDKVersion:        "1.1.0",
+			GenVersion:        "2.66.0",
 		},
 	}
 	for _, opt := range opts {

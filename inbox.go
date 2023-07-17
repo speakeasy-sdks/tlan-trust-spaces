@@ -9,6 +9,7 @@ import (
 	"io"
 	"net/http"
 	"tlan-trust-spaces/pkg/models/operations"
+	"tlan-trust-spaces/pkg/models/sdkerrors"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/utils"
 )
@@ -118,6 +119,8 @@ func (s *inbox) GetConversationByID(ctx context.Context, request operations.GetC
 			}
 
 			res.Conversation = out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	}
 
@@ -173,6 +176,8 @@ func (s *inbox) GetMessageByID(ctx context.Context, request operations.GetMessag
 			}
 
 			res.Message = out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	}
 
@@ -228,6 +233,8 @@ func (s *inbox) ListConversationsBySpaceID(ctx context.Context, request operatio
 			}
 
 			res.Inbox = out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	}
 
@@ -343,6 +350,8 @@ func (s *inbox) StartConversation(ctx context.Context, request operations.StartC
 			}
 
 			res.ConversationStartResponse = out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	}
 
