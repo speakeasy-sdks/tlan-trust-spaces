@@ -40,3 +40,31 @@ type Space struct {
 	RootFolderID string         `json:"rootFolderId"`
 	SpaceType    SpaceSpaceType `json:"spaceType"`
 }
+
+func (o *Space) GetID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ID
+}
+
+func (o *Space) GetName() string {
+	if o == nil {
+		return ""
+	}
+	return o.Name
+}
+
+func (o *Space) GetRootFolderID() string {
+	if o == nil {
+		return ""
+	}
+	return o.RootFolderID
+}
+
+func (o *Space) GetSpaceType() SpaceSpaceType {
+	if o == nil {
+		return SpaceSpaceType("")
+	}
+	return o.SpaceType
+}

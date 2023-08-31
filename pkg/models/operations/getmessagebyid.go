@@ -11,10 +11,45 @@ type GetMessageByIDRequest struct {
 	MessageID string `pathParam:"style=simple,explode=false,name=messageId"`
 }
 
+func (o *GetMessageByIDRequest) GetMessageID() string {
+	if o == nil {
+		return ""
+	}
+	return o.MessageID
+}
+
 type GetMessageByIDResponse struct {
 	ContentType string
 	// ok
 	Message     *shared.Message
 	StatusCode  int
 	RawResponse *http.Response
+}
+
+func (o *GetMessageByIDResponse) GetContentType() string {
+	if o == nil {
+		return ""
+	}
+	return o.ContentType
+}
+
+func (o *GetMessageByIDResponse) GetMessage() *shared.Message {
+	if o == nil {
+		return nil
+	}
+	return o.Message
+}
+
+func (o *GetMessageByIDResponse) GetStatusCode() int {
+	if o == nil {
+		return 0
+	}
+	return o.StatusCode
+}
+
+func (o *GetMessageByIDResponse) GetRawResponse() *http.Response {
+	if o == nil {
+		return nil
+	}
+	return o.RawResponse
 }

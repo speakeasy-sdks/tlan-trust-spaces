@@ -6,3 +6,10 @@ package shared
 type SpaceList struct {
 	Spaces []Space `json:"spaces"`
 }
+
+func (o *SpaceList) GetSpaces() []Space {
+	if o == nil {
+		return []Space{}
+	}
+	return o.Spaces
+}

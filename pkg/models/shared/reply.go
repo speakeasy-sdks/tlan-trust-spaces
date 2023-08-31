@@ -6,3 +6,17 @@ type Reply struct {
 	Documents []MessageDocument `json:"documents,omitempty"`
 	Message   *string           `json:"message,omitempty"`
 }
+
+func (o *Reply) GetDocuments() []MessageDocument {
+	if o == nil {
+		return nil
+	}
+	return o.Documents
+}
+
+func (o *Reply) GetMessage() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Message
+}

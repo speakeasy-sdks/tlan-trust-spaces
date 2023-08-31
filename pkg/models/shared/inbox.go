@@ -6,3 +6,10 @@ package shared
 type Inbox struct {
 	Conversations []ConversationListItem `json:"conversations"`
 }
+
+func (o *Inbox) GetConversations() []ConversationListItem {
+	if o == nil {
+		return []ConversationListItem{}
+	}
+	return o.Conversations
+}

@@ -15,3 +15,45 @@ type Conversation struct {
 	Read            bool      `json:"read"`
 	Subject         string    `json:"subject"`
 }
+
+func (o *Conversation) GetCreatedDate() time.Time {
+	if o == nil {
+		return time.Time{}
+	}
+	return o.CreatedDate
+}
+
+func (o *Conversation) GetID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ID
+}
+
+func (o *Conversation) GetLastMessageDate() time.Time {
+	if o == nil {
+		return time.Time{}
+	}
+	return o.LastMessageDate
+}
+
+func (o *Conversation) GetMessages() []Message {
+	if o == nil {
+		return []Message{}
+	}
+	return o.Messages
+}
+
+func (o *Conversation) GetRead() bool {
+	if o == nil {
+		return false
+	}
+	return o.Read
+}
+
+func (o *Conversation) GetSubject() string {
+	if o == nil {
+		return ""
+	}
+	return o.Subject
+}

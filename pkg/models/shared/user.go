@@ -7,3 +7,24 @@ type User struct {
 	ID    *string `json:"id,omitempty"`
 	Name  string  `json:"name"`
 }
+
+func (o *User) GetEmail() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Email
+}
+
+func (o *User) GetID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ID
+}
+
+func (o *User) GetName() string {
+	if o == nil {
+		return ""
+	}
+	return o.Name
+}

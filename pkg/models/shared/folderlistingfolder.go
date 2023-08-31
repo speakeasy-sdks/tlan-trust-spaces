@@ -6,3 +6,17 @@ type FolderListingFolder struct {
 	ID   *string `json:"id,omitempty"`
 	Name *string `json:"name,omitempty"`
 }
+
+func (o *FolderListingFolder) GetID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ID
+}
+
+func (o *FolderListingFolder) GetName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Name
+}

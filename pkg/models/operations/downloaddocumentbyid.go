@@ -10,10 +10,45 @@ type DownloadDocumentByIDRequest struct {
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 }
 
+func (o *DownloadDocumentByIDRequest) GetDocumentID() string {
+	if o == nil {
+		return ""
+	}
+	return o.DocumentID
+}
+
 type DownloadDocumentByIDResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
 	// ok
 	DownloadDocumentByID200ApplicationOctetStreamBinaryString []byte
+}
+
+func (o *DownloadDocumentByIDResponse) GetContentType() string {
+	if o == nil {
+		return ""
+	}
+	return o.ContentType
+}
+
+func (o *DownloadDocumentByIDResponse) GetStatusCode() int {
+	if o == nil {
+		return 0
+	}
+	return o.StatusCode
+}
+
+func (o *DownloadDocumentByIDResponse) GetRawResponse() *http.Response {
+	if o == nil {
+		return nil
+	}
+	return o.RawResponse
+}
+
+func (o *DownloadDocumentByIDResponse) GetDownloadDocumentByID200ApplicationOctetStreamBinaryString() []byte {
+	if o == nil {
+		return nil
+	}
+	return o.DownloadDocumentByID200ApplicationOctetStreamBinaryString
 }

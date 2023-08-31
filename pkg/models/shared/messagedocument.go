@@ -6,3 +6,17 @@ type MessageDocument struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
 }
+
+func (o *MessageDocument) GetID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ID
+}
+
+func (o *MessageDocument) GetName() string {
+	if o == nil {
+		return ""
+	}
+	return o.Name
+}

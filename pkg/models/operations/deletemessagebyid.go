@@ -10,8 +10,36 @@ type DeleteMessageByIDRequest struct {
 	MessageID string `pathParam:"style=simple,explode=false,name=messageId"`
 }
 
+func (o *DeleteMessageByIDRequest) GetMessageID() string {
+	if o == nil {
+		return ""
+	}
+	return o.MessageID
+}
+
 type DeleteMessageByIDResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
+}
+
+func (o *DeleteMessageByIDResponse) GetContentType() string {
+	if o == nil {
+		return ""
+	}
+	return o.ContentType
+}
+
+func (o *DeleteMessageByIDResponse) GetStatusCode() int {
+	if o == nil {
+		return 0
+	}
+	return o.StatusCode
+}
+
+func (o *DeleteMessageByIDResponse) GetRawResponse() *http.Response {
+	if o == nil {
+		return nil
+	}
+	return o.RawResponse
 }

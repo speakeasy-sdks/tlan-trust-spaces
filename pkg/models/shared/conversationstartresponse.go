@@ -6,3 +6,10 @@ package shared
 type ConversationStartResponse struct {
 	ConversationID string `json:"conversationId"`
 }
+
+func (o *ConversationStartResponse) GetConversationID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ConversationID
+}

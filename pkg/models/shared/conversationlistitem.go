@@ -13,3 +13,38 @@ type ConversationListItem struct {
 	Read            bool      `json:"read"`
 	Subject         string    `json:"subject"`
 }
+
+func (o *ConversationListItem) GetCreatedDate() time.Time {
+	if o == nil {
+		return time.Time{}
+	}
+	return o.CreatedDate
+}
+
+func (o *ConversationListItem) GetID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ID
+}
+
+func (o *ConversationListItem) GetLastMessageDate() time.Time {
+	if o == nil {
+		return time.Time{}
+	}
+	return o.LastMessageDate
+}
+
+func (o *ConversationListItem) GetRead() bool {
+	if o == nil {
+		return false
+	}
+	return o.Read
+}
+
+func (o *ConversationListItem) GetSubject() string {
+	if o == nil {
+		return ""
+	}
+	return o.Subject
+}

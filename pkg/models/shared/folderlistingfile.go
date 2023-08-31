@@ -7,3 +7,24 @@ type FolderListingFile struct {
 	Name        *string `json:"name,omitempty"`
 	SizeInBytes *int64  `json:"sizeInBytes,omitempty"`
 }
+
+func (o *FolderListingFile) GetID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ID
+}
+
+func (o *FolderListingFile) GetName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Name
+}
+
+func (o *FolderListingFile) GetSizeInBytes() *int64 {
+	if o == nil {
+		return nil
+	}
+	return o.SizeInBytes
+}

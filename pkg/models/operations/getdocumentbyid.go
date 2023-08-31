@@ -10,9 +10,23 @@ type GetDocumentByIDRequest struct {
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 }
 
+func (o *GetDocumentByIDRequest) GetDocumentID() string {
+	if o == nil {
+		return ""
+	}
+	return o.DocumentID
+}
+
 // GetDocumentByID200ApplicationJSON - ok
 type GetDocumentByID200ApplicationJSON struct {
 	ID *string `json:"Id,omitempty"`
+}
+
+func (o *GetDocumentByID200ApplicationJSON) GetID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ID
 }
 
 type GetDocumentByIDResponse struct {
@@ -21,4 +35,32 @@ type GetDocumentByIDResponse struct {
 	RawResponse *http.Response
 	// ok
 	GetDocumentByID200ApplicationJSONObject *GetDocumentByID200ApplicationJSON
+}
+
+func (o *GetDocumentByIDResponse) GetContentType() string {
+	if o == nil {
+		return ""
+	}
+	return o.ContentType
+}
+
+func (o *GetDocumentByIDResponse) GetStatusCode() int {
+	if o == nil {
+		return 0
+	}
+	return o.StatusCode
+}
+
+func (o *GetDocumentByIDResponse) GetRawResponse() *http.Response {
+	if o == nil {
+		return nil
+	}
+	return o.RawResponse
+}
+
+func (o *GetDocumentByIDResponse) GetGetDocumentByID200ApplicationJSONObject() *GetDocumentByID200ApplicationJSON {
+	if o == nil {
+		return nil
+	}
+	return o.GetDocumentByID200ApplicationJSONObject
 }

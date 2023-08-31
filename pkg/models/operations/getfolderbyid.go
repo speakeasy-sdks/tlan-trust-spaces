@@ -11,10 +11,45 @@ type GetFolderByIDRequest struct {
 	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
 }
 
+func (o *GetFolderByIDRequest) GetFolderID() string {
+	if o == nil {
+		return ""
+	}
+	return o.FolderID
+}
+
 type GetFolderByIDResponse struct {
 	ContentType string
 	// ok
 	FolderListing *shared.FolderListing
 	StatusCode    int
 	RawResponse   *http.Response
+}
+
+func (o *GetFolderByIDResponse) GetContentType() string {
+	if o == nil {
+		return ""
+	}
+	return o.ContentType
+}
+
+func (o *GetFolderByIDResponse) GetFolderListing() *shared.FolderListing {
+	if o == nil {
+		return nil
+	}
+	return o.FolderListing
+}
+
+func (o *GetFolderByIDResponse) GetStatusCode() int {
+	if o == nil {
+		return 0
+	}
+	return o.StatusCode
+}
+
+func (o *GetFolderByIDResponse) GetRawResponse() *http.Response {
+	if o == nil {
+		return nil
+	}
+	return o.RawResponse
 }

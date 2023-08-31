@@ -10,9 +10,30 @@ type UploadDocumentRequestBodyAttributes struct {
 	FolderID string `json:"folderId"`
 }
 
+func (o *UploadDocumentRequestBodyAttributes) GetFolderID() string {
+	if o == nil {
+		return ""
+	}
+	return o.FolderID
+}
+
 type UploadDocumentRequestBodyDocument struct {
 	Content  []byte `multipartForm:"content"`
 	Document string `multipartForm:"name=document"`
+}
+
+func (o *UploadDocumentRequestBodyDocument) GetContent() []byte {
+	if o == nil {
+		return []byte{}
+	}
+	return o.Content
+}
+
+func (o *UploadDocumentRequestBodyDocument) GetDocument() string {
+	if o == nil {
+		return ""
+	}
+	return o.Document
 }
 
 type UploadDocumentRequestBody1 struct {
@@ -20,9 +41,30 @@ type UploadDocumentRequestBody1 struct {
 	Document   UploadDocumentRequestBodyDocument   `multipartForm:"file"`
 }
 
+func (o *UploadDocumentRequestBody1) GetAttributes() UploadDocumentRequestBodyAttributes {
+	if o == nil {
+		return UploadDocumentRequestBodyAttributes{}
+	}
+	return o.Attributes
+}
+
+func (o *UploadDocumentRequestBody1) GetDocument() UploadDocumentRequestBodyDocument {
+	if o == nil {
+		return UploadDocumentRequestBodyDocument{}
+	}
+	return o.Document
+}
+
 // UploadDocument201ApplicationJSON - Upload successful
 type UploadDocument201ApplicationJSON struct {
 	DocumentID *string `json:"documentId,omitempty"`
+}
+
+func (o *UploadDocument201ApplicationJSON) GetDocumentID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DocumentID
 }
 
 type UploadDocumentResponse struct {
@@ -31,4 +73,32 @@ type UploadDocumentResponse struct {
 	RawResponse *http.Response
 	// Upload successful
 	UploadDocument201ApplicationJSONObject *UploadDocument201ApplicationJSON
+}
+
+func (o *UploadDocumentResponse) GetContentType() string {
+	if o == nil {
+		return ""
+	}
+	return o.ContentType
+}
+
+func (o *UploadDocumentResponse) GetStatusCode() int {
+	if o == nil {
+		return 0
+	}
+	return o.StatusCode
+}
+
+func (o *UploadDocumentResponse) GetRawResponse() *http.Response {
+	if o == nil {
+		return nil
+	}
+	return o.RawResponse
+}
+
+func (o *UploadDocumentResponse) GetUploadDocument201ApplicationJSONObject() *UploadDocument201ApplicationJSON {
+	if o == nil {
+		return nil
+	}
+	return o.UploadDocument201ApplicationJSONObject
 }

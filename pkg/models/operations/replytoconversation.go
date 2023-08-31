@@ -12,8 +12,43 @@ type ReplyToConversationRequest struct {
 	ConversationID string        `pathParam:"style=simple,explode=false,name=conversationId"`
 }
 
+func (o *ReplyToConversationRequest) GetReply() *shared.Reply {
+	if o == nil {
+		return nil
+	}
+	return o.Reply
+}
+
+func (o *ReplyToConversationRequest) GetConversationID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ConversationID
+}
+
 type ReplyToConversationResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
+}
+
+func (o *ReplyToConversationResponse) GetContentType() string {
+	if o == nil {
+		return ""
+	}
+	return o.ContentType
+}
+
+func (o *ReplyToConversationResponse) GetStatusCode() int {
+	if o == nil {
+		return 0
+	}
+	return o.StatusCode
+}
+
+func (o *ReplyToConversationResponse) GetRawResponse() *http.Response {
+	if o == nil {
+		return nil
+	}
+	return o.RawResponse
 }

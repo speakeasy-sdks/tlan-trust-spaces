@@ -15,3 +15,45 @@ type Message struct {
 	Message        string            `json:"message"`
 	Sender         User              `json:"sender"`
 }
+
+func (o *Message) GetConversationID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ConversationID
+}
+
+func (o *Message) GetCreatedDate() time.Time {
+	if o == nil {
+		return time.Time{}
+	}
+	return o.CreatedDate
+}
+
+func (o *Message) GetDocuments() []MessageDocument {
+	if o == nil {
+		return []MessageDocument{}
+	}
+	return o.Documents
+}
+
+func (o *Message) GetID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ID
+}
+
+func (o *Message) GetMessage() string {
+	if o == nil {
+		return ""
+	}
+	return o.Message
+}
+
+func (o *Message) GetSender() User {
+	if o == nil {
+		return User{}
+	}
+	return o.Sender
+}

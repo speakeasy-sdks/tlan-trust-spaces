@@ -11,3 +11,45 @@ type FolderListing struct {
 	Parent  string                `json:"parent"`
 	SpaceID string                `json:"spaceId"`
 }
+
+func (o *FolderListing) GetFiles() []FolderListingFile {
+	if o == nil {
+		return []FolderListingFile{}
+	}
+	return o.Files
+}
+
+func (o *FolderListing) GetFolders() []FolderListingFolder {
+	if o == nil {
+		return []FolderListingFolder{}
+	}
+	return o.Folders
+}
+
+func (o *FolderListing) GetID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ID
+}
+
+func (o *FolderListing) GetName() string {
+	if o == nil {
+		return ""
+	}
+	return o.Name
+}
+
+func (o *FolderListing) GetParent() string {
+	if o == nil {
+		return ""
+	}
+	return o.Parent
+}
+
+func (o *FolderListing) GetSpaceID() string {
+	if o == nil {
+		return ""
+	}
+	return o.SpaceID
+}

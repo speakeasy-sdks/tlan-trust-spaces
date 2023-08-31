@@ -6,9 +6,44 @@ type ConversationStartDocuments struct {
 	ID *string `json:"id,omitempty"`
 }
 
+func (o *ConversationStartDocuments) GetID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ID
+}
+
 type ConversationStart struct {
 	Documents  []ConversationStartDocuments `json:"documents,omitempty"`
 	Message    *string                      `json:"message,omitempty"`
 	Recipients []string                     `json:"recipients"`
 	Subject    string                       `json:"subject"`
+}
+
+func (o *ConversationStart) GetDocuments() []ConversationStartDocuments {
+	if o == nil {
+		return nil
+	}
+	return o.Documents
+}
+
+func (o *ConversationStart) GetMessage() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Message
+}
+
+func (o *ConversationStart) GetRecipients() []string {
+	if o == nil {
+		return []string{}
+	}
+	return o.Recipients
+}
+
+func (o *ConversationStart) GetSubject() string {
+	if o == nil {
+		return ""
+	}
+	return o.Subject
 }
