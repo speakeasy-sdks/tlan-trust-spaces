@@ -242,25 +242,13 @@ func main() {
         Reply: &shared.Reply{
             Documents: []shared.MessageDocument{
                 shared.MessageDocument{
-                    ID: "8d69a674-e0f4-467c-8879-6ed151a05dfc",
-                    Name: "Teri Strosin",
-                },
-                shared.MessageDocument{
-                    ID: "cc78ca1b-a928-4fc8-9674-2cb739205929",
-                    Name: "Faye Howe",
-                },
-                shared.MessageDocument{
-                    ID: "a7596eb1-0faa-4a23-92c5-955907aff1a3",
-                    Name: "Carlos Ziemann",
-                },
-                shared.MessageDocument{
-                    ID: "46773925-1aa5-42c3-b5ad-019da1ffe78f",
-                    Name: "Geneva Klein Jr.",
+                    ID: "d8d69a67-4e0f-4467-8c87-96ed151a05df",
+                    Name: "Fred Strosin",
                 },
             },
-            Message: tlantrustspaces.String("reprehenderit"),
+            Message: tlantrustspaces.String("molestiae"),
         },
-        ConversationID: "ut",
+        ConversationID: "quod",
     })
     if err != nil {
         log.Fatal(err)
@@ -314,25 +302,16 @@ func main() {
         ConversationStart: &shared.ConversationStart{
             Documents: []shared.ConversationStartDocuments{
                 shared.ConversationStartDocuments{
-                    ID: tlantrustspaces.String("15471b5e-6e13-4b99-9488-e1e91e450ad2"),
-                },
-                shared.ConversationStartDocuments{
-                    ID: tlantrustspaces.String("abd44269-802d-4502-a94b-b4f63c969e9a"),
-                },
-                shared.ConversationStartDocuments{
-                    ID: tlantrustspaces.String("3efa77df-b14c-4d66-ae39-5efb9ba88f3a"),
-                },
-                shared.ConversationStartDocuments{
-                    ID: tlantrustspaces.String("66997074-ba44-469b-ae21-41959890afa5"),
+                    ID: tlantrustspaces.String("c78ca1ba-928f-4c81-a742-cb7392059293"),
                 },
             },
-            Message: tlantrustspaces.String("eum"),
+            Message: tlantrustspaces.String("natus"),
             Recipients: []string{
-                "necessitatibus",
+                "laboriosam",
             },
-            Subject: "odit",
+            Subject: "hic",
         },
-        SpaceID: "nemo",
+        SpaceID: "saepe",
     })
     if err != nil {
         log.Fatal(err)
