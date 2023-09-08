@@ -1,7 +1,5 @@
 # Conversation
 
-Conversation details
-
 
 ## Fields
 

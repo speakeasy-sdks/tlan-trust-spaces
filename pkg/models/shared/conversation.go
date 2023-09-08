@@ -6,7 +6,6 @@ import (
 	"time"
 )
 
-// Conversation - Conversation details
 type Conversation struct {
 	CreatedDate     time.Time `json:"createdDate"`
 	ID              string    `json:"id"`

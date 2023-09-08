@@ -1,7 +1,5 @@
 # Inbox
 
-ok
-
 
 ## Fields
 
