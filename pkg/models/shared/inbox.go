@@ -2,7 +2,6 @@
 
 package shared
 
-// Inbox - ok
 type Inbox struct {
 	Conversations []ConversationListItem `json:"conversations"`
 }

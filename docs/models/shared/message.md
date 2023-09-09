@@ -1,7 +1,5 @@
 # Message
 
-ok
-
 
 ## Fields
 

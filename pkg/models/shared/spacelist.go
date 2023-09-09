@@ -2,7 +2,6 @@
 
 package shared
 
-// SpaceList - ok
 type SpaceList struct {
 	Spaces []Space `json:"spaces"`
 }

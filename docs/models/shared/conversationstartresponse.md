@@ -1,7 +1,5 @@
 # ConversationStartResponse
 
-ok
-
 
 ## Fields
 

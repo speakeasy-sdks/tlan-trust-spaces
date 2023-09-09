@@ -2,7 +2,6 @@
 
 package shared
 
-// ConversationStartResponse - ok
 type ConversationStartResponse struct {
 	ConversationID string `json:"conversationId"`
 }

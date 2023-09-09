@@ -2,7 +2,6 @@
 
 package shared
 
-// FolderListing - ok
 type FolderListing struct {
 	Files   []FolderListingFile   `json:"files"`
 	Folders []FolderListingFolder `json:"folders"`
