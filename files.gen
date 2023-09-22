@@ -8,9 +8,11 @@ pkg/types/bigint.go
 pkg/types/date.go
 pkg/types/datetime.go
 pkg/types/decimal.go
+pkg/types/pointers.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
+pkg/utils/json.go
 pkg/utils/pathparams.go
 pkg/utils/queryparams.go
 pkg/utils/requestbody.go
@@ -43,9 +45,6 @@ pkg/models/shared/folderlistingfile.go
 pkg/models/shared/spacelist.go
 pkg/models/shared/space.go
 pkg/models/shared/security.go
-docs/sdks/tlantrustspaces/README.md
-docs/sdks/inbox/README.md
-docs/sdks/repository/README.md
 USAGE.md
 docs/models/operations/deletemessagebyidrequest.md
 docs/models/operations/deletemessagebyidresponse.md
@@ -89,4 +88,7 @@ docs/models/shared/spacelist.md
 docs/models/shared/spacespacetype.md
 docs/models/shared/space.md
 docs/models/shared/security.md
+docs/sdks/tlantrustspaces/README.md
+docs/sdks/inbox/README.md
+docs/sdks/repository/README.md
 .gitattributes

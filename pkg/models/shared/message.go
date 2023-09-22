@@ -4,6 +4,7 @@ package shared
 
 import (
 	"time"
+	"tlan-trust-spaces/pkg/utils"
 )
 
 type Message struct {
@@ -13,6 +14,17 @@ type Message struct {
 	ID             string            `json:"id"`
 	Message        string            `json:"message"`
 	Sender         User              `json:"sender"`
+}
+
+func (m Message) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(m, "", false)
+}
+
+func (m *Message) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &m, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *Message) GetConversationID() string {

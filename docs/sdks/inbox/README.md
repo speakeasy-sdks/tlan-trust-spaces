@@ -21,7 +21,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -35,7 +35,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.DeleteMessageByID(ctx, operations.DeleteMessageByIDRequest{
-        MessageID: "provident",
+        MessageID: "distinctio",
     })
     if err != nil {
         log.Fatal(err)
@@ -72,7 +72,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -86,7 +86,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.GetConversationByID(ctx, operations.GetConversationByIDRequest{
-        ConversationID: "distinctio",
+        ConversationID: "quibusdam",
     })
     if err != nil {
         log.Fatal(err)
@@ -123,7 +123,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -137,7 +137,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.GetMessageByID(ctx, operations.GetMessageByIDRequest{
-        MessageID: "quibusdam",
+        MessageID: "unde",
     })
     if err != nil {
         log.Fatal(err)
@@ -174,7 +174,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -188,7 +188,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.ListConversationsBySpaceID(ctx, operations.ListConversationsBySpaceIDRequest{
-        SpaceID: "unde",
+        SpaceID: "nulla",
     })
     if err != nil {
         log.Fatal(err)
@@ -225,7 +225,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -242,11 +242,11 @@ func main() {
         Reply: &shared.Reply{
             Documents: []shared.MessageDocument{
                 shared.MessageDocument{
-                    ID: "d8d69a67-4e0f-4467-8c87-96ed151a05df",
-                    Name: "Fred Strosin",
+                    ID: "8d69a674-e0f4-467c-8879-6ed151a05dfc",
+                    Name: "Teri Strosin",
                 },
             },
-            Message: tlantrustspaces.String("molestiae"),
+            Message: tlantrustspaces.String("quod"),
         },
         ConversationID: "quod",
     })
@@ -285,7 +285,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -302,16 +302,16 @@ func main() {
         ConversationStart: &shared.ConversationStart{
             Documents: []shared.ConversationStartDocuments{
                 shared.ConversationStartDocuments{
-                    ID: tlantrustspaces.String("c78ca1ba-928f-4c81-a742-cb7392059293"),
+                    ID: tlantrustspaces.String("78ca1ba9-28fc-4816-b42c-b73920592939"),
                 },
             },
-            Message: tlantrustspaces.String("natus"),
+            Message: tlantrustspaces.String("laboriosam"),
             Recipients: []string{
-                "laboriosam",
+                "hic",
             },
-            Subject: "hic",
+            Subject: "saepe",
         },
-        SpaceID: "saepe",
+        SpaceID: "fuga",
     })
     if err != nil {
         log.Fatal(err)

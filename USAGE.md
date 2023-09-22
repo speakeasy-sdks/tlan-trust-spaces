@@ -7,7 +7,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )

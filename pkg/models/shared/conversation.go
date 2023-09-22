@@ -4,6 +4,7 @@ package shared
 
 import (
 	"time"
+	"tlan-trust-spaces/pkg/utils"
 )
 
 type Conversation struct {
@@ -13,6 +14,17 @@ type Conversation struct {
 	Messages        []Message `json:"messages"`
 	Read            bool      `json:"read"`
 	Subject         string    `json:"subject"`
+}
+
+func (c Conversation) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *Conversation) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *Conversation) GetCreatedDate() time.Time {

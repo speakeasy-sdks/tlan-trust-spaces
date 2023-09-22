@@ -20,7 +20,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -34,7 +34,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.DownloadDocumentByID(ctx, operations.DownloadDocumentByIDRequest{
-        DocumentID: "fuga",
+        DocumentID: "in",
     })
     if err != nil {
         log.Fatal(err)
@@ -71,7 +71,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -85,7 +85,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.GetDocumentByID(ctx, operations.GetDocumentByIDRequest{
-        DocumentID: "in",
+        DocumentID: "corporis",
     })
     if err != nil {
         log.Fatal(err)
@@ -122,7 +122,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -136,7 +136,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.GetFolderByID(ctx, operations.GetFolderByIDRequest{
-        FolderID: "corporis",
+        FolderID: "iste",
     })
     if err != nil {
         log.Fatal(err)
@@ -173,7 +173,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 )
 
@@ -220,7 +220,7 @@ package main
 import(
 	"context"
 	"log"
-	"tlan-trust-spaces"
+	tlantrustspaces "tlan-trust-spaces"
 	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
 )
@@ -235,11 +235,11 @@ func main() {
     ctx := context.Background()
     res, err := s.Repository.UploadDocument(ctx, operations.UploadDocumentRequestBody1{
         Attributes: operations.UploadDocumentRequestBodyAttributes{
-            FolderID: "iste",
+            FolderID: "iure",
         },
         Document: operations.UploadDocumentRequestBodyDocument{
-            Content: []byte("iure"),
-            Document: "saepe",
+            Content: []byte("saepe"),
+            Document: "quidem",
         },
     })
     if err != nil {
