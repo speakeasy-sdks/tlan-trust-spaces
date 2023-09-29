@@ -36,19 +36,19 @@ func (o *UploadDocumentRequestBodyDocument) GetDocument() string {
 	return o.Document
 }
 
-type UploadDocumentRequestBody1 struct {
+type UploadDocumentRequestBody struct {
 	Attributes UploadDocumentRequestBodyAttributes `multipartForm:"name=attributes,json"`
 	Document   UploadDocumentRequestBodyDocument   `multipartForm:"file"`
 }
 
-func (o *UploadDocumentRequestBody1) GetAttributes() UploadDocumentRequestBodyAttributes {
+func (o *UploadDocumentRequestBody) GetAttributes() UploadDocumentRequestBodyAttributes {
 	if o == nil {
 		return UploadDocumentRequestBodyAttributes{}
 	}
 	return o.Attributes
 }
 
-func (o *UploadDocumentRequestBody1) GetDocument() UploadDocumentRequestBodyDocument {
+func (o *UploadDocumentRequestBody) GetDocument() UploadDocumentRequestBodyDocument {
 	if o == nil {
 		return UploadDocumentRequestBodyDocument{}
 	}
@@ -68,8 +68,11 @@ func (o *UploadDocument201ApplicationJSON) GetDocumentID() *string {
 }
 
 type UploadDocumentResponse struct {
+	// HTTP response content type for this operation
 	ContentType string
-	StatusCode  int
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Upload successful
 	UploadDocument201ApplicationJSONObject *UploadDocument201ApplicationJSON

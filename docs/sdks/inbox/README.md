@@ -1,4 +1,5 @@
 # Inbox
+(*Inbox*)
 
 ### Available Operations
 
@@ -35,7 +36,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.DeleteMessageByID(ctx, operations.DeleteMessageByIDRequest{
-        MessageID: "distinctio",
+        MessageID: "vaguely playfully PCI",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,7 +87,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.GetConversationByID(ctx, operations.GetConversationByIDRequest{
-        ConversationID: "quibusdam",
+        ConversationID: "Keyboard sed Fresh",
     })
     if err != nil {
         log.Fatal(err)
@@ -137,7 +138,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.GetMessageByID(ctx, operations.GetMessageByIDRequest{
-        MessageID: "unde",
+        MessageID: "tangible yippee voluptatibus",
     })
     if err != nil {
         log.Fatal(err)
@@ -188,7 +189,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.ListConversationsBySpaceID(ctx, operations.ListConversationsBySpaceIDRequest{
-        SpaceID: "nulla",
+        SpaceID: "emulation",
     })
     if err != nil {
         log.Fatal(err)
@@ -242,13 +243,13 @@ func main() {
         Reply: &shared.Reply{
             Documents: []shared.MessageDocument{
                 shared.MessageDocument{
-                    ID: "8d69a674-e0f4-467c-8879-6ed151a05dfc",
-                    Name: "Teri Strosin",
+                    ID: "<ID>",
+                    Name: "Frozen Borders untried",
                 },
             },
-            Message: tlantrustspaces.String("quod"),
+            Message: tlantrustspaces.String("Southeast female"),
         },
-        ConversationID: "quod",
+        ConversationID: "energetic",
     })
     if err != nil {
         log.Fatal(err)
@@ -302,16 +303,16 @@ func main() {
         ConversationStart: &shared.ConversationStart{
             Documents: []shared.ConversationStartDocuments{
                 shared.ConversationStartDocuments{
-                    ID: tlantrustspaces.String("78ca1ba9-28fc-4816-b42c-b73920592939"),
+                    ID: tlantrustspaces.String("<ID>"),
                 },
             },
-            Message: tlantrustspaces.String("laboriosam"),
+            Message: tlantrustspaces.String("Rubber"),
             Recipients: []string{
-                "hic",
+                "Account",
             },
-            Subject: "saepe",
+            Subject: "East Security Montenegro",
         },
-        SpaceID: "fuga",
+        SpaceID: "absent ROI",
     })
     if err != nil {
         log.Fatal(err)

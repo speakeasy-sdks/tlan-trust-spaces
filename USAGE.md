@@ -21,7 +21,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.DeleteMessageByID(ctx, operations.DeleteMessageByIDRequest{
-        MessageID: "corrupti",
+        MessageID: "vaguely playfully PCI",
     })
     if err != nil {
         log.Fatal(err)

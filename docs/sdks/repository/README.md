@@ -1,4 +1,5 @@
 # Repository
+(*Repository*)
 
 ### Available Operations
 
@@ -34,7 +35,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.DownloadDocumentByID(ctx, operations.DownloadDocumentByIDRequest{
-        DocumentID: "in",
+        DocumentID: "an North Customer",
     })
     if err != nil {
         log.Fatal(err)
@@ -85,7 +86,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.GetDocumentByID(ctx, operations.GetDocumentByIDRequest{
-        DocumentID: "corporis",
+        DocumentID: "Wooden Cis",
     })
     if err != nil {
         log.Fatal(err)
@@ -136,7 +137,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.GetFolderByID(ctx, operations.GetFolderByIDRequest{
-        FolderID: "iste",
+        FolderID: "nor to",
     })
     if err != nil {
         log.Fatal(err)
@@ -233,13 +234,13 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Repository.UploadDocument(ctx, operations.UploadDocumentRequestBody1{
+    res, err := s.Repository.UploadDocument(ctx, operations.UploadDocumentRequestBody{
         Attributes: operations.UploadDocumentRequestBodyAttributes{
-            FolderID: "iure",
+            FolderID: "lux virtual",
         },
         Document: operations.UploadDocumentRequestBodyDocument{
-            Content: []byte("saepe"),
-            Document: "quidem",
+            Content: []byte("[DSt8zX4$E"),
+            Document: "complex",
         },
     })
     if err != nil {
@@ -254,10 +255,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.UploadDocumentRequestBody1](../../models/operations/uploaddocumentrequestbody1.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.UploadDocumentRequestBody](../../models/operations/uploaddocumentrequestbody.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response

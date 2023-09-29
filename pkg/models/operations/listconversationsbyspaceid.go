@@ -19,10 +19,13 @@ func (o *ListConversationsBySpaceIDRequest) GetSpaceID() string {
 }
 
 type ListConversationsBySpaceIDResponse struct {
+	// HTTP response content type for this operation
 	ContentType string
 	// ok
-	Inbox       *shared.Inbox
-	StatusCode  int
+	Inbox *shared.Inbox
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 

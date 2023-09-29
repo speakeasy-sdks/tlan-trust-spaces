@@ -68,7 +68,7 @@ docs/models/operations/getfolderbyidresponse.md
 docs/models/operations/getspacesresponse.md
 docs/models/operations/uploaddocumentrequestbodyattributes.md
 docs/models/operations/uploaddocumentrequestbodydocument.md
-docs/models/operations/uploaddocumentrequestbody1.md
+docs/models/operations/uploaddocumentrequestbody.md
 docs/models/operations/uploaddocument201applicationjson.md
 docs/models/operations/uploaddocumentresponse.md
 docs/models/shared/conversation.md
