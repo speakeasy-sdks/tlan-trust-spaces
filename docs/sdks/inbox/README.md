@@ -247,9 +247,8 @@ func main() {
                     Name: "Frozen Borders untried",
                 },
             },
-            Message: tlantrustspaces.String("Southeast female"),
         },
-        ConversationID: "energetic",
+        ConversationID: "Southeast female",
     })
     if err != nil {
         log.Fatal(err)
@@ -302,17 +301,14 @@ func main() {
     res, err := s.Inbox.StartConversation(ctx, operations.StartConversationRequest{
         ConversationStart: &shared.ConversationStart{
             Documents: []shared.ConversationStartDocuments{
-                shared.ConversationStartDocuments{
-                    ID: tlantrustspaces.String("<ID>"),
-                },
+                shared.ConversationStartDocuments{},
             },
-            Message: tlantrustspaces.String("Rubber"),
             Recipients: []string{
-                "Account",
+                "Northeast",
             },
-            Subject: "East Security Montenegro",
+            Subject: "Account after",
         },
-        SpaceID: "absent ROI",
+        SpaceID: "Security Montenegro",
     })
     if err != nil {
         log.Fatal(err)

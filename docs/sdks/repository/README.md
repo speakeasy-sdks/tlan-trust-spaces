@@ -234,7 +234,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Repository.UploadDocument(ctx, operations.UploadDocumentRequestBody{
+    res, err := s.Repository.UploadDocument(ctx, &operations.UploadDocumentRequestBody{
         Attributes: operations.UploadDocumentRequestBodyAttributes{
             FolderID: "lux virtual",
         },

@@ -3,6 +3,7 @@
 package operations
 
 import (
+	"io"
 	"net/http"
 )
 
@@ -25,7 +26,8 @@ type DownloadDocumentByIDResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// ok
-	DownloadDocumentByID200ApplicationOctetStreamBinaryString []byte
+	// The Close method must be called on this field, even if it is not used, to prevent resource leaks.
+	DownloadDocumentByID200ApplicationOctetStreamBinaryString io.ReadCloser
 }
 
 func (o *DownloadDocumentByIDResponse) GetContentType() string {
@@ -49,7 +51,7 @@ func (o *DownloadDocumentByIDResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *DownloadDocumentByIDResponse) GetDownloadDocumentByID200ApplicationOctetStreamBinaryString() []byte {
+func (o *DownloadDocumentByIDResponse) GetDownloadDocumentByID200ApplicationOctetStreamBinaryString() io.ReadCloser {
 	if o == nil {
 		return nil
 	}
