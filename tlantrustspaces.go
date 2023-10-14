@@ -137,9 +137,9 @@ func New(opts ...SDKOption) *TlanTrustSpaces {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "1.6.0",
-			GenVersion:        "2.150.0",
-			UserAgent:         "speakeasy-sdk/go 1.6.0 2.150.0 1.0.0 tlan-trust-spaces",
+			SDKVersion:        "1.6.1",
+			GenVersion:        "2.155.1",
+			UserAgent:         "speakeasy-sdk/go 1.6.1 2.155.1 1.0.0 tlan-trust-spaces",
 		},
 	}
 	for _, opt := range opts {

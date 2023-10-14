@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: d2d88ca564586090f38734cd280879b0
   docVersion: 1.0.0
-  speakeasyVersion: 1.96.1
-  generationVersion: 2.150.0
+  speakeasyVersion: 1.99.2
+  generationVersion: 2.155.1
 generation:
   comments:
     disableComments: false
@@ -14,12 +14,12 @@ generation:
   tagNamespacingDisabled: false
 features:
   go:
-    core: 2.91.4
+    core: 2.91.5
     downloadStreams: 0.1.0
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.0
 go:
-  version: 1.6.0
+  version: 1.6.1
   flattenGlobalSecurity: true
   maxMethodParams: 0
   packageName: tlan-trust-spaces

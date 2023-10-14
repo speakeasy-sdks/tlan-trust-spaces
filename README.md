@@ -13,33 +13,32 @@ go get github.com/speakeasy-sdks/tlan-trust-spaces
 ```go
 package main
 
-import(
+import (
 	"context"
 	"log"
 	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
 	"tlan-trust-spaces/pkg/models/operations"
+	"tlan-trust-spaces/pkg/models/shared"
 )
 
 func main() {
-    s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(shared.Security{
-            BearerAuth: "",
-        }),
-    )
+	s := tlantrustspaces.New(
+		tlantrustspaces.WithSecurity(""),
+	)
 
-    ctx := context.Background()
-    res, err := s.Inbox.DeleteMessageByID(ctx, operations.DeleteMessageByIDRequest{
-        MessageID: "vaguely playfully PCI",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
+	ctx := context.Background()
+	res, err := s.Inbox.DeleteMessageByID(ctx, operations.DeleteMessageByIDRequest{
+		MessageID: "vaguely playfully PCI",
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    if res.StatusCode == http.StatusOK {
-        // handle response
-    }
+	if res.StatusCode == http.StatusOK {
+		// handle response
+	}
 }
+
 ```
 <!-- End SDK Example Usage -->
 

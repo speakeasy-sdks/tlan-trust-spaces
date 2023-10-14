@@ -29,9 +29,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(shared.Security{
-            BearerAuth: "",
-        }),
+        tlantrustspaces.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -80,9 +78,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(shared.Security{
-            BearerAuth: "",
-        }),
+        tlantrustspaces.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -131,9 +127,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(shared.Security{
-            BearerAuth: "",
-        }),
+        tlantrustspaces.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -182,9 +176,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(shared.Security{
-            BearerAuth: "",
-        }),
+        tlantrustspaces.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -233,9 +225,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(shared.Security{
-            BearerAuth: "",
-        }),
+        tlantrustspaces.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -292,9 +282,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(shared.Security{
-            BearerAuth: "",
-        }),
+        tlantrustspaces.WithSecurity(""),
     )
 
     ctx := context.Background()
