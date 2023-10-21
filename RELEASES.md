@@ -85,3 +85,13 @@ Based on:
 - [go v1.6.1] .
 ### Releases
 - [Go v1.6.1] https://github.com/speakeasy-sdks/tlan-trust-spaces/releases/tag/v1.6.1 - .
+
+## 2023-10-21 00:58:33
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.104.0 (2.169.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v1.7.0] .
+### Releases
+- [Go v1.7.0] https://github.com/speakeasy-sdks/tlan-trust-spaces/releases/tag/v1.7.0 - .

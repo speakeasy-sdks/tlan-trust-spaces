@@ -34,7 +34,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.DeleteMessageByID(ctx, operations.DeleteMessageByIDRequest{
-        MessageID: "vaguely playfully PCI",
+        MessageID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -83,7 +83,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.GetConversationByID(ctx, operations.GetConversationByIDRequest{
-        ConversationID: "Keyboard sed Fresh",
+        ConversationID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -132,7 +132,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.GetMessageByID(ctx, operations.GetMessageByIDRequest{
-        MessageID: "tangible yippee voluptatibus",
+        MessageID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -181,7 +181,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.ListConversationsBySpaceID(ctx, operations.ListConversationsBySpaceIDRequest{
-        SpaceID: "emulation",
+        SpaceID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -234,11 +234,11 @@ func main() {
             Documents: []shared.MessageDocument{
                 shared.MessageDocument{
                     ID: "<ID>",
-                    Name: "Frozen Borders untried",
+                    Name: "string",
                 },
             },
         },
-        ConversationID: "Southeast female",
+        ConversationID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -292,11 +292,11 @@ func main() {
                 shared.ConversationStartDocuments{},
             },
             Recipients: []string{
-                "Northeast",
+                "string",
             },
-            Subject: "Account after",
+            Subject: "string",
         },
-        SpaceID: "Security Montenegro",
+        SpaceID: "string",
     })
     if err != nil {
         log.Fatal(err)
