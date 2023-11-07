@@ -27,7 +27,7 @@ type DownloadDocumentByIDResponse struct {
 	RawResponse *http.Response
 	// ok
 	// The Close method must be called on this field, even if it is not used, to prevent resource leaks.
-	DownloadDocumentByID200ApplicationOctetStreamBinaryString io.ReadCloser
+	Stream io.ReadCloser
 }
 
 func (o *DownloadDocumentByIDResponse) GetContentType() string {
@@ -51,9 +51,9 @@ func (o *DownloadDocumentByIDResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *DownloadDocumentByIDResponse) GetDownloadDocumentByID200ApplicationOctetStreamBinaryString() io.ReadCloser {
+func (o *DownloadDocumentByIDResponse) GetStream() io.ReadCloser {
 	if o == nil {
 		return nil
 	}
-	return o.DownloadDocumentByID200ApplicationOctetStreamBinaryString
+	return o.Stream
 }

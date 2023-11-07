@@ -9,24 +9,24 @@ import (
 	"io"
 	"net/http"
 	"strings"
-	"tlan-trust-spaces/pkg/models/operations"
-	"tlan-trust-spaces/pkg/models/sdkerrors"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/utils"
+	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v2/pkg/models/sdkerrors"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/utils"
 )
 
-type repository struct {
+type Repository struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newRepository(sdkConfig sdkConfiguration) *repository {
-	return &repository{
+func newRepository(sdkConfig sdkConfiguration) *Repository {
+	return &Repository{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // DownloadDocumentByID - Download document
-func (s *repository) DownloadDocumentByID(ctx context.Context, request operations.DownloadDocumentByIDRequest) (*operations.DownloadDocumentByIDResponse, error) {
+func (s *Repository) DownloadDocumentByID(ctx context.Context, request operations.DownloadDocumentByIDRequest) (*operations.DownloadDocumentByIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/_download", request, nil)
 	if err != nil {
@@ -59,7 +59,7 @@ func (s *repository) DownloadDocumentByID(ctx context.Context, request operation
 	}
 
 	if (httpRes.StatusCode == 200) && utils.MatchContentType(contentType, `application/octet-stream`) {
-		res.DownloadDocumentByID200ApplicationOctetStreamBinaryString = httpRes.Body
+		res.Stream = httpRes.Body
 
 		return res, nil
 	}
@@ -76,13 +76,17 @@ func (s *repository) DownloadDocumentByID(ctx context.Context, request operation
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
 }
 
 // GetDocumentByID - Retrieve document
-func (s *repository) GetDocumentByID(ctx context.Context, request operations.GetDocumentByIDRequest) (*operations.GetDocumentByIDResponse, error) {
+func (s *Repository) GetDocumentByID(ctx context.Context, request operations.GetDocumentByIDRequest) (*operations.GetDocumentByIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}", request, nil)
 	if err != nil {
@@ -124,22 +128,26 @@ func (s *repository) GetDocumentByID(ctx context.Context, request operations.Get
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out operations.GetDocumentByID200ApplicationJSON
+			var out operations.GetDocumentByIDResponseBody
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.GetDocumentByID200ApplicationJSONObject = &out
+			res.Object = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
 }
 
 // GetFolderByID - List folder content
-func (s *repository) GetFolderByID(ctx context.Context, request operations.GetFolderByIDRequest) (*operations.GetFolderByIDResponse, error) {
+func (s *Repository) GetFolderByID(ctx context.Context, request operations.GetFolderByIDRequest) (*operations.GetFolderByIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/folders/{folderId}", request, nil)
 	if err != nil {
@@ -190,13 +198,17 @@ func (s *repository) GetFolderByID(ctx context.Context, request operations.GetFo
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
 }
 
 // GetSpaces - List all spaces with access
-func (s *repository) GetSpaces(ctx context.Context) (*operations.GetSpacesResponse, error) {
+func (s *Repository) GetSpaces(ctx context.Context) (*operations.GetSpacesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/spaces"
 
@@ -244,13 +256,17 @@ func (s *repository) GetSpaces(ctx context.Context) (*operations.GetSpacesRespon
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
 }
 
 // UploadDocument - Upload new document
-func (s *repository) UploadDocument(ctx context.Context, request *operations.UploadDocumentRequestBody) (*operations.UploadDocumentResponse, error) {
+func (s *Repository) UploadDocument(ctx context.Context, request *operations.UploadDocumentRequestBody) (*operations.UploadDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/documents"
 
@@ -296,15 +312,19 @@ func (s *repository) UploadDocument(ctx context.Context, request *operations.Upl
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out operations.UploadDocument201ApplicationJSON
+			var out operations.UploadDocumentResponseBody
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.UploadDocument201ApplicationJSONObject = &out
+			res.Object = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil

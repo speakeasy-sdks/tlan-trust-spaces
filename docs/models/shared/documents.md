@@ -1,10 +1,8 @@
-# UploadDocument201ApplicationJSON
-
-Upload successful
+# Documents
 
 
 ## Fields
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `DocumentID`       | **string*          | :heavy_minus_sign: | N/A                |
+| `ID`               | **string*          | :heavy_minus_sign: | N/A                |

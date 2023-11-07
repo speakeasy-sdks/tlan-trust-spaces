@@ -1,8 +1,10 @@
-# ConversationStartDocuments
+# UploadDocumentResponseBody
+
+Upload successful
 
 
 ## Fields
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `ID`               | **string*          | :heavy_minus_sign: | N/A                |
+| `DocumentID`       | **string*          | :heavy_minus_sign: | N/A                |

@@ -17,12 +17,12 @@ func (o *GetDocumentByIDRequest) GetDocumentID() string {
 	return o.DocumentID
 }
 
-// GetDocumentByID200ApplicationJSON - ok
-type GetDocumentByID200ApplicationJSON struct {
+// GetDocumentByIDResponseBody - ok
+type GetDocumentByIDResponseBody struct {
 	ID *string `json:"Id,omitempty"`
 }
 
-func (o *GetDocumentByID200ApplicationJSON) GetID() *string {
+func (o *GetDocumentByIDResponseBody) GetID() *string {
 	if o == nil {
 		return nil
 	}
@@ -37,7 +37,7 @@ type GetDocumentByIDResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// ok
-	GetDocumentByID200ApplicationJSONObject *GetDocumentByID200ApplicationJSON
+	Object *GetDocumentByIDResponseBody
 }
 
 func (o *GetDocumentByIDResponse) GetContentType() string {
@@ -61,9 +61,9 @@ func (o *GetDocumentByIDResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *GetDocumentByIDResponse) GetGetDocumentByID200ApplicationJSONObject() *GetDocumentByID200ApplicationJSON {
+func (o *GetDocumentByIDResponse) GetObject() *GetDocumentByIDResponseBody {
 	if o == nil {
 		return nil
 	}
-	return o.GetDocumentByID200ApplicationJSONObject
+	return o.Object
 }

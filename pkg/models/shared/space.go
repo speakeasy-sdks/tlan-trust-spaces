@@ -7,18 +7,18 @@ import (
 	"fmt"
 )
 
-type SpaceSpaceType string
+type SpaceType string
 
 const (
-	SpaceSpaceTypePersonal SpaceSpaceType = "personal"
-	SpaceSpaceTypeTeam     SpaceSpaceType = "team"
+	SpaceTypePersonal SpaceType = "personal"
+	SpaceTypeTeam     SpaceType = "team"
 )
 
-func (e SpaceSpaceType) ToPointer() *SpaceSpaceType {
+func (e SpaceType) ToPointer() *SpaceType {
 	return &e
 }
 
-func (e *SpaceSpaceType) UnmarshalJSON(data []byte) error {
+func (e *SpaceType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -27,18 +27,18 @@ func (e *SpaceSpaceType) UnmarshalJSON(data []byte) error {
 	case "personal":
 		fallthrough
 	case "team":
-		*e = SpaceSpaceType(v)
+		*e = SpaceType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpaceSpaceType: %v", v)
+		return fmt.Errorf("invalid value for SpaceType: %v", v)
 	}
 }
 
 type Space struct {
-	ID           string         `json:"id"`
-	Name         string         `json:"name"`
-	RootFolderID string         `json:"rootFolderId"`
-	SpaceType    SpaceSpaceType `json:"spaceType"`
+	ID           string    `json:"id"`
+	Name         string    `json:"name"`
+	RootFolderID string    `json:"rootFolderId"`
+	SpaceType    SpaceType `json:"spaceType"`
 }
 
 func (o *Space) GetID() string {
@@ -62,9 +62,9 @@ func (o *Space) GetRootFolderID() string {
 	return o.RootFolderID
 }
 
-func (o *Space) GetSpaceType() SpaceSpaceType {
+func (o *Space) GetSpaceType() SpaceType {
 	if o == nil {
-		return SpaceSpaceType("")
+		return SpaceType("")
 	}
 	return o.SpaceType
 }

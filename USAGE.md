@@ -7,9 +7,9 @@ package main
 import (
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/operations"
-	"tlan-trust-spaces/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v2/pkg/models/shared"
 )
 
 func main() {
@@ -18,14 +18,14 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Inbox.DeleteMessageByID(ctx, operations.DeleteMessageByIDRequest{
-		MessageID: "string",
+	res, err := s.Repository.DownloadDocumentByID(ctx, operations.DownloadDocumentByIDRequest{
+		DocumentID: "string",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.StatusCode == http.StatusOK {
+	if res.Stream != nil {
 		// handle response
 	}
 }

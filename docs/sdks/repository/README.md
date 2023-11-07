@@ -1,5 +1,5 @@
 # Repository
-(*Repository*)
+(*.Repository*)
 
 ### Available Operations
 
@@ -21,9 +21,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -39,7 +39,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.DownloadDocumentByID200ApplicationOctetStreamBinaryString != nil {
+    if res.Stream != nil {
         // handle response
     }
 }
@@ -70,9 +70,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -88,7 +88,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetDocumentByID200ApplicationJSONObject != nil {
+    if res.Object != nil {
         // handle response
     }
 }
@@ -119,9 +119,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -168,8 +168,8 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
 )
 
 func main() {
@@ -213,9 +213,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -225,19 +225,19 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.UploadDocument(ctx, &operations.UploadDocumentRequestBody{
-        Attributes: operations.UploadDocumentRequestBodyAttributes{
+        Attributes: operations.Attributes{
             FolderID: "string",
         },
-        Document: operations.UploadDocumentRequestBodyDocument{
-            Content: []byte("LgyO<[DSt8"),
-            Document: "string",
+        Document: operations.Document{
+            Content: []byte("0xaAFa6d8bD5"),
+            FileName: "electronic_hempstead_fresh.mpga",
         },
     })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.UploadDocument201ApplicationJSONObject != nil {
+    if res.Object != nil {
         // handle response
     }
 }

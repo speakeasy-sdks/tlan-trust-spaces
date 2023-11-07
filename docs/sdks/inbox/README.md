@@ -1,5 +1,5 @@
 # Inbox
-(*Inbox*)
+(*.Inbox*)
 
 ### Available Operations
 
@@ -22,9 +22,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -71,9 +71,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -120,9 +120,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -169,9 +169,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -218,9 +218,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -275,9 +275,9 @@ package main
 import(
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/operations"
 )
 
 func main() {
@@ -288,8 +288,8 @@ func main() {
     ctx := context.Background()
     res, err := s.Inbox.StartConversation(ctx, operations.StartConversationRequest{
         ConversationStart: &shared.ConversationStart{
-            Documents: []shared.ConversationStartDocuments{
-                shared.ConversationStartDocuments{},
+            Documents: []shared.Documents{
+                shared.Documents{},
             },
             Recipients: []string{
                 "string",

@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/utils"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/utils"
 )
 
 // ServerList contains the list of servers available to the SDK
@@ -66,8 +66,8 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 
 // TlanTrustSpaces - d.velop trust spaces API: API for d.velop trust spaces
 type TlanTrustSpaces struct {
-	Inbox      *inbox
-	Repository *repository
+	Repository *Repository
+	Inbox      *Inbox
 
 	sdkConfiguration sdkConfiguration
 }
@@ -137,9 +137,9 @@ func New(opts ...SDKOption) *TlanTrustSpaces {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "1.7.0",
-			GenVersion:        "2.169.0",
-			UserAgent:         "speakeasy-sdk/go 1.7.0 2.169.0 1.0.0 tlan-trust-spaces",
+			SDKVersion:        "2.0.0",
+			GenVersion:        "2.181.1",
+			UserAgent:         "speakeasy-sdk/go 2.0.0 2.181.1 1.0.0 tlan-trust-spaces",
 		},
 	}
 	for _, opt := range opts {
@@ -158,9 +158,9 @@ func New(opts ...SDKOption) *TlanTrustSpaces {
 		}
 	}
 
-	sdk.Inbox = newInbox(sdk.sdkConfiguration)
-
 	sdk.Repository = newRepository(sdk.sdkConfiguration)
+
+	sdk.Inbox = newInbox(sdk.sdkConfiguration)
 
 	return sdk
 }

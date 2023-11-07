@@ -4,7 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"tlan-trust-spaces/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/models/shared"
 )
 
 type GetConversationByIDRequest struct {

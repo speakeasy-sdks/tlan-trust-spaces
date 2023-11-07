@@ -2,11 +2,11 @@
 
 package shared
 
-type ConversationStartDocuments struct {
+type Documents struct {
 	ID *string `json:"id,omitempty"`
 }
 
-func (o *ConversationStartDocuments) GetID() *string {
+func (o *Documents) GetID() *string {
 	if o == nil {
 		return nil
 	}
@@ -14,13 +14,13 @@ func (o *ConversationStartDocuments) GetID() *string {
 }
 
 type ConversationStart struct {
-	Documents  []ConversationStartDocuments `json:"documents,omitempty"`
-	Message    *string                      `json:"message,omitempty"`
-	Recipients []string                     `json:"recipients"`
-	Subject    string                       `json:"subject"`
+	Documents  []Documents `json:"documents,omitempty"`
+	Message    *string     `json:"message,omitempty"`
+	Recipients []string    `json:"recipients"`
+	Subject    string      `json:"subject"`
 }
 
-func (o *ConversationStart) GetDocuments() []ConversationStartDocuments {
+func (o *ConversationStart) GetDocuments() []Documents {
 	if o == nil {
 		return nil
 	}

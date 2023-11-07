@@ -1,10 +1,8 @@
-# GetDocumentByID200ApplicationJSON
-
-ok
+# Attributes
 
 
 ## Fields
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `ID`               | **string*          | :heavy_minus_sign: | N/A                |
+| `FolderID`         | *string*           | :heavy_check_mark: | N/A                |

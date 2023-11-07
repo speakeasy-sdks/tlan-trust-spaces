@@ -4,7 +4,7 @@ package shared
 
 import (
 	"time"
-	"tlan-trust-spaces/pkg/utils"
+	"tlan-trust-spaces/v2/pkg/utils"
 )
 
 type ConversationListItem struct {

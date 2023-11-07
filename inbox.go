@@ -8,24 +8,24 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"tlan-trust-spaces/pkg/models/operations"
-	"tlan-trust-spaces/pkg/models/sdkerrors"
-	"tlan-trust-spaces/pkg/models/shared"
-	"tlan-trust-spaces/pkg/utils"
+	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v2/pkg/models/sdkerrors"
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	"tlan-trust-spaces/v2/pkg/utils"
 )
 
-type inbox struct {
+type Inbox struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newInbox(sdkConfig sdkConfiguration) *inbox {
-	return &inbox{
+func newInbox(sdkConfig sdkConfiguration) *Inbox {
+	return &Inbox{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // DeleteMessageByID - Delete message
-func (s *inbox) DeleteMessageByID(ctx context.Context, request operations.DeleteMessageByIDRequest) (*operations.DeleteMessageByIDResponse, error) {
+func (s *Inbox) DeleteMessageByID(ctx context.Context, request operations.DeleteMessageByIDRequest) (*operations.DeleteMessageByIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/inbox/messages/{messageId}", request, nil)
 	if err != nil {
@@ -65,13 +65,17 @@ func (s *inbox) DeleteMessageByID(ctx context.Context, request operations.Delete
 	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
 	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
 }
 
 // GetConversationByID - Get conversation content
-func (s *inbox) GetConversationByID(ctx context.Context, request operations.GetConversationByIDRequest) (*operations.GetConversationByIDResponse, error) {
+func (s *Inbox) GetConversationByID(ctx context.Context, request operations.GetConversationByIDRequest) (*operations.GetConversationByIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/inbox/conversations/{conversationId}", request, nil)
 	if err != nil {
@@ -122,13 +126,17 @@ func (s *inbox) GetConversationByID(ctx context.Context, request operations.GetC
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
 }
 
 // GetMessageByID - Get message details
-func (s *inbox) GetMessageByID(ctx context.Context, request operations.GetMessageByIDRequest) (*operations.GetMessageByIDResponse, error) {
+func (s *Inbox) GetMessageByID(ctx context.Context, request operations.GetMessageByIDRequest) (*operations.GetMessageByIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/inbox/messages/{messageId}", request, nil)
 	if err != nil {
@@ -179,13 +187,17 @@ func (s *inbox) GetMessageByID(ctx context.Context, request operations.GetMessag
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
 }
 
 // ListConversationsBySpaceID - List conversations of a space
-func (s *inbox) ListConversationsBySpaceID(ctx context.Context, request operations.ListConversationsBySpaceIDRequest) (*operations.ListConversationsBySpaceIDResponse, error) {
+func (s *Inbox) ListConversationsBySpaceID(ctx context.Context, request operations.ListConversationsBySpaceIDRequest) (*operations.ListConversationsBySpaceIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/inbox/{spaceId}", request, nil)
 	if err != nil {
@@ -236,13 +248,17 @@ func (s *inbox) ListConversationsBySpaceID(ctx context.Context, request operatio
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
 }
 
 // ReplyToConversation - Reply to conversation
-func (s *inbox) ReplyToConversation(ctx context.Context, request operations.ReplyToConversationRequest) (*operations.ReplyToConversationResponse, error) {
+func (s *Inbox) ReplyToConversation(ctx context.Context, request operations.ReplyToConversationRequest) (*operations.ReplyToConversationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/inbox/conversations/{conversationId}", request, nil)
 	if err != nil {
@@ -289,13 +305,17 @@ func (s *inbox) ReplyToConversation(ctx context.Context, request operations.Repl
 	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
 	case httpRes.StatusCode == 201:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
 }
 
 // StartConversation - Start new conversation
-func (s *inbox) StartConversation(ctx context.Context, request operations.StartConversationRequest) (*operations.StartConversationResponse, error) {
+func (s *Inbox) StartConversation(ctx context.Context, request operations.StartConversationRequest) (*operations.StartConversationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/inbox/{spaceId}", request, nil)
 	if err != nil {
@@ -353,6 +373,10 @@ func (s *inbox) StartConversation(ctx context.Context, request operations.StartC
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil

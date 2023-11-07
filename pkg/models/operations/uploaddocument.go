@@ -6,61 +6,61 @@ import (
 	"net/http"
 )
 
-type UploadDocumentRequestBodyAttributes struct {
+type Attributes struct {
 	FolderID string `json:"folderId"`
 }
 
-func (o *UploadDocumentRequestBodyAttributes) GetFolderID() string {
+func (o *Attributes) GetFolderID() string {
 	if o == nil {
 		return ""
 	}
 	return o.FolderID
 }
 
-type UploadDocumentRequestBodyDocument struct {
+type Document struct {
 	Content  []byte `multipartForm:"content"`
-	Document string `multipartForm:"name=document"`
+	FileName string `multipartForm:"name=document"`
 }
 
-func (o *UploadDocumentRequestBodyDocument) GetContent() []byte {
+func (o *Document) GetContent() []byte {
 	if o == nil {
 		return []byte{}
 	}
 	return o.Content
 }
 
-func (o *UploadDocumentRequestBodyDocument) GetDocument() string {
+func (o *Document) GetFileName() string {
 	if o == nil {
 		return ""
 	}
-	return o.Document
+	return o.FileName
 }
 
 type UploadDocumentRequestBody struct {
-	Attributes UploadDocumentRequestBodyAttributes `multipartForm:"name=attributes,json"`
-	Document   UploadDocumentRequestBodyDocument   `multipartForm:"file"`
+	Attributes Attributes `multipartForm:"name=attributes,json"`
+	Document   Document   `multipartForm:"file"`
 }
 
-func (o *UploadDocumentRequestBody) GetAttributes() UploadDocumentRequestBodyAttributes {
+func (o *UploadDocumentRequestBody) GetAttributes() Attributes {
 	if o == nil {
-		return UploadDocumentRequestBodyAttributes{}
+		return Attributes{}
 	}
 	return o.Attributes
 }
 
-func (o *UploadDocumentRequestBody) GetDocument() UploadDocumentRequestBodyDocument {
+func (o *UploadDocumentRequestBody) GetDocument() Document {
 	if o == nil {
-		return UploadDocumentRequestBodyDocument{}
+		return Document{}
 	}
 	return o.Document
 }
 
-// UploadDocument201ApplicationJSON - Upload successful
-type UploadDocument201ApplicationJSON struct {
+// UploadDocumentResponseBody - Upload successful
+type UploadDocumentResponseBody struct {
 	DocumentID *string `json:"documentId,omitempty"`
 }
 
-func (o *UploadDocument201ApplicationJSON) GetDocumentID() *string {
+func (o *UploadDocumentResponseBody) GetDocumentID() *string {
 	if o == nil {
 		return nil
 	}
@@ -75,7 +75,7 @@ type UploadDocumentResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Upload successful
-	UploadDocument201ApplicationJSONObject *UploadDocument201ApplicationJSON
+	Object *UploadDocumentResponseBody
 }
 
 func (o *UploadDocumentResponse) GetContentType() string {
@@ -99,9 +99,9 @@ func (o *UploadDocumentResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *UploadDocumentResponse) GetUploadDocument201ApplicationJSONObject() *UploadDocument201ApplicationJSON {
+func (o *UploadDocumentResponse) GetObject() *UploadDocumentResponseBody {
 	if o == nil {
 		return nil
 	}
-	return o.UploadDocument201ApplicationJSONObject
+	return o.Object
 }
