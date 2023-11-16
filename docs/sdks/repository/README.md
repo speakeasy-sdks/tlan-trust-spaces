@@ -19,11 +19,11 @@ Download document
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -70,11 +70,11 @@ Retrieve document
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -121,11 +121,11 @@ List folder content
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -172,10 +172,10 @@ List all spaces with access
 package main
 
 import(
+	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
-	"tlan-trust-spaces/v2/pkg/models/shared"
 )
 
 func main() {
@@ -219,11 +219,11 @@ Upload new document
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {

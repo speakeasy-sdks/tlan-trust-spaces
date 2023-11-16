@@ -20,11 +20,12 @@ Delete message
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -71,11 +72,11 @@ Get conversation content
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -122,11 +123,11 @@ Get message details
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -173,11 +174,11 @@ List conversations of a space
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -224,11 +225,12 @@ Reply to conversation
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -283,11 +285,11 @@ Start new conversation
 package main
 
 import(
-	"context"
-	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
 	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v2"
+	"context"
 	"tlan-trust-spaces/v2/pkg/models/operations"
+	"log"
 )
 
 func main() {
