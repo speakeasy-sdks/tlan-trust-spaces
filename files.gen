@@ -46,7 +46,6 @@ pkg/utils/utils.go
 /pkg/models/shared/conversationstartresponse.go
 /pkg/models/shared/conversationstart.go
 /pkg/models/shared/security.go
-USAGE.md
 docs/pkg/models/operations/downloaddocumentbyidrequest.md
 docs/pkg/models/operations/downloaddocumentbyidresponse.md
 docs/pkg/models/operations/getdocumentbyidrequest.md
@@ -92,4 +91,5 @@ docs/pkg/models/shared/security.md
 docs/sdks/tlantrustspaces/README.md
 docs/sdks/repository/README.md
 docs/sdks/inbox/README.md
+USAGE.md
 .gitattributes
