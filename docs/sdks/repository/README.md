@@ -28,7 +28,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(""),
+        tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     ctx := context.Background()
@@ -79,7 +79,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(""),
+        tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     ctx := context.Background()
@@ -130,7 +130,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(""),
+        tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     ctx := context.Background()
@@ -180,7 +180,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(""),
+        tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     ctx := context.Background()
@@ -228,7 +228,7 @@ import(
 
 func main() {
     s := tlantrustspaces.New(
-        tlantrustspaces.WithSecurity(""),
+        tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     ctx := context.Background()

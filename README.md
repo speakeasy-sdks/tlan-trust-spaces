@@ -26,7 +26,7 @@ import (
 
 func main() {
 	s := tlantrustspaces.New(
-		tlantrustspaces.WithSecurity(""),
+		tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -74,6 +74,8 @@ func main() {
 
 <!-- Start Special Types [types] -->
 ## Special Types
+
+
 <!-- End Special Types [types] -->
 
 
@@ -104,7 +106,7 @@ import (
 
 func main() {
 	s := tlantrustspaces.New(
-		tlantrustspaces.WithSecurity(""),
+		tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -154,7 +156,7 @@ import (
 func main() {
 	s := tlantrustspaces.New(
 		tlantrustspaces.WithServerIndex(1),
-		tlantrustspaces.WithSecurity(""),
+		tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -190,7 +192,7 @@ import (
 func main() {
 	s := tlantrustspaces.New(
 		tlantrustspaces.WithServerURL("https://repository.int.otc.fts.d-3.de/api/v1"),
-		tlantrustspaces.WithSecurity(""),
+		tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -266,7 +268,7 @@ import (
 
 func main() {
 	s := tlantrustspaces.New(
-		tlantrustspaces.WithSecurity(""),
+		tlantrustspaces.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()

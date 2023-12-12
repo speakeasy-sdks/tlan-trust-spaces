@@ -117,7 +117,6 @@ func withSecurity(security interface{}) func(context.Context) (interface{}, erro
 }
 
 // WithSecurity configures the SDK to use the provided security details
-
 func WithSecurity(bearerAuth string) SDKOption {
 	return func(sdk *TlanTrustSpaces) {
 		security := shared.Security{BearerAuth: bearerAuth}
@@ -137,9 +136,9 @@ func New(opts ...SDKOption) *TlanTrustSpaces {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "2.0.3",
-			GenVersion:        "2.202.2",
-			UserAgent:         "speakeasy-sdk/go 2.0.3 2.202.2 1.0.0 tlan-trust-spaces",
+			SDKVersion:        "2.1.0",
+			GenVersion:        "2.213.3",
+			UserAgent:         "speakeasy-sdk/go 2.1.0 2.213.3 1.0.0 tlan-trust-spaces",
 		},
 	}
 	for _, opt := range opts {
