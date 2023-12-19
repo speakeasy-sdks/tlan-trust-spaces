@@ -60,7 +60,7 @@ func main() {
 **[*operations.DeleteMessageByIDResponse](../../pkg/models/operations/deletemessagebyidresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetConversationByID
 
@@ -111,7 +111,7 @@ func main() {
 **[*operations.GetConversationByIDResponse](../../pkg/models/operations/getconversationbyidresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetMessageByID
 
@@ -162,7 +162,7 @@ func main() {
 **[*operations.GetMessageByIDResponse](../../pkg/models/operations/getmessagebyidresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## ListConversationsBySpaceID
 
@@ -213,7 +213,7 @@ func main() {
 **[*operations.ListConversationsBySpaceIDResponse](../../pkg/models/operations/listconversationsbyspaceidresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## ReplyToConversation
 
@@ -273,7 +273,7 @@ func main() {
 **[*operations.ReplyToConversationResponse](../../pkg/models/operations/replytoconversationresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## StartConversation
 
@@ -333,4 +333,4 @@ func main() {
 **[*operations.StartConversationResponse](../../pkg/models/operations/startconversationresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |

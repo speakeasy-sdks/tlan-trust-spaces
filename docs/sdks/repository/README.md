@@ -58,7 +58,7 @@ func main() {
 **[*operations.DownloadDocumentByIDResponse](../../pkg/models/operations/downloaddocumentbyidresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetDocumentByID
 
@@ -109,7 +109,7 @@ func main() {
 **[*operations.GetDocumentByIDResponse](../../pkg/models/operations/getdocumentbyidresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetFolderByID
 
@@ -160,7 +160,7 @@ func main() {
 **[*operations.GetFolderByIDResponse](../../pkg/models/operations/getfolderbyidresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetSpaces
 
@@ -207,7 +207,7 @@ func main() {
 **[*operations.GetSpacesResponse](../../pkg/models/operations/getspacesresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## UploadDocument
 
@@ -264,4 +264,4 @@ func main() {
 **[*operations.UploadDocumentResponse](../../pkg/models/operations/uploaddocumentresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
