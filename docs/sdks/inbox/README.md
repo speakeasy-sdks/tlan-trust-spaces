@@ -20,10 +20,10 @@ Delete message
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 	"net/http"
 )
@@ -72,10 +72,10 @@ Get conversation content
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 )
 
@@ -123,10 +123,10 @@ Get message details
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 )
 
@@ -174,10 +174,10 @@ List conversations of a space
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 )
 
@@ -225,10 +225,10 @@ Reply to conversation
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 	"net/http"
 )
@@ -285,10 +285,10 @@ Start new conversation
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 )
 

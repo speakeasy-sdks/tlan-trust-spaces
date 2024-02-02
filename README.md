@@ -19,9 +19,9 @@ package main
 import (
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
-	"tlan-trust-spaces/v2/pkg/models/operations"
-	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
+	"tlan-trust-spaces/v3/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/shared"
 )
 
 func main() {
@@ -98,10 +98,10 @@ import (
 	"context"
 	"errors"
 	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
-	"tlan-trust-spaces/v2/pkg/models/operations"
-	"tlan-trust-spaces/v2/pkg/models/sdkerrors"
-	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
+	"tlan-trust-spaces/v3/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/sdkerrors"
+	"tlan-trust-spaces/v3/pkg/models/shared"
 )
 
 func main() {
@@ -148,9 +148,9 @@ package main
 import (
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
-	"tlan-trust-spaces/v2/pkg/models/operations"
-	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
+	"tlan-trust-spaces/v3/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/shared"
 )
 
 func main() {
@@ -184,9 +184,9 @@ package main
 import (
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
-	"tlan-trust-spaces/v2/pkg/models/operations"
-	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
+	"tlan-trust-spaces/v3/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/shared"
 )
 
 func main() {
@@ -262,8 +262,8 @@ package main
 import (
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	tlantrustspaces "tlan-trust-spaces/v3"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 )
 
 func main() {

@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"tlan-trust-spaces/v2/pkg/models/operations"
-	"tlan-trust-spaces/v2/pkg/models/sdkerrors"
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	"tlan-trust-spaces/v2/pkg/utils"
+	"tlan-trust-spaces/v3/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/sdkerrors"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	"tlan-trust-spaces/v3/pkg/utils"
 )
 
 type Inbox struct {

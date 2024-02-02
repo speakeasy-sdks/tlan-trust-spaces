@@ -5,9 +5,9 @@ package main
 import (
 	"context"
 	"log"
-	tlantrustspaces "tlan-trust-spaces/v2"
-	"tlan-trust-spaces/v2/pkg/models/operations"
-	"tlan-trust-spaces/v2/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
+	"tlan-trust-spaces/v3/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/shared"
 )
 
 func main() {

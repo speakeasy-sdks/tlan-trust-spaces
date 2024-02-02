@@ -4,7 +4,7 @@ package shared
 
 import (
 	"time"
-	"tlan-trust-spaces/v2/pkg/utils"
+	"tlan-trust-spaces/v3/pkg/utils"
 )
 
 type Conversation struct {

@@ -1,4 +1,4 @@
-module tlan-trust-spaces/v2
+module tlan-trust-spaces/v3
 
 go 1.20
 

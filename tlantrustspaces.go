@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	"tlan-trust-spaces/v2/pkg/utils"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	"tlan-trust-spaces/v3/pkg/utils"
 )
 
 // ServerList contains the list of servers available to the SDK
@@ -145,9 +145,9 @@ func New(opts ...SDKOption) *TlanTrustSpaces {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "2.1.4",
-			GenVersion:        "2.245.1",
-			UserAgent:         "speakeasy-sdk/go 2.1.4 2.245.1 1.0.0 tlan-trust-spaces",
+			SDKVersion:        "3.0.0",
+			GenVersion:        "2.248.1",
+			UserAgent:         "speakeasy-sdk/go 3.0.0 2.248.1 1.0.0 tlan-trust-spaces",
 		},
 	}
 	for _, opt := range opts {

@@ -19,10 +19,10 @@ Download document
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 )
 
@@ -70,10 +70,10 @@ Retrieve document
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 )
 
@@ -121,10 +121,10 @@ List folder content
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 )
 
@@ -172,8 +172,8 @@ List all spaces with access
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
 	"log"
 )
@@ -219,10 +219,10 @@ Upload new document
 package main
 
 import(
-	"tlan-trust-spaces/v2/pkg/models/shared"
-	tlantrustspaces "tlan-trust-spaces/v2"
+	"tlan-trust-spaces/v3/pkg/models/shared"
+	tlantrustspaces "tlan-trust-spaces/v3"
 	"context"
-	"tlan-trust-spaces/v2/pkg/models/operations"
+	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
 )
 

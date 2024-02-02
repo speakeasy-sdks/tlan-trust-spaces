@@ -12,7 +12,7 @@ import (
 	"time"
 	"unsafe"
 
-	"tlan-trust-spaces/v2/pkg/types"
+	"tlan-trust-spaces/v3/pkg/types"
 
 	"github.com/ericlagergren/decimal"
 )
