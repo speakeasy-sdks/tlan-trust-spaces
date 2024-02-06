@@ -205,3 +205,13 @@ Based on:
 - [go v3.0.0] .
 ### Releases
 - [Go v3.0.0] https://github.com/speakeasy-sdks/tlan-trust-spaces/releases/tag/v3.0.0 - .
+
+## 2024-02-06 00:48:13
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.167.3 (2.250.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v3.0.1] .
+### Releases
+- [Go v3.0.1] https://github.com/speakeasy-sdks/tlan-trust-spaces/releases/tag/v3.0.1 - .
