@@ -240,14 +240,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.ReplyToConversation(ctx, operations.ReplyToConversationRequest{
-        Reply: &shared.Reply{
-            Documents: []shared.MessageDocument{
-                shared.MessageDocument{
-                    ID: "<ID>",
-                    Name: "string",
-                },
-            },
-        },
         ConversationID: "string",
     })
     if err != nil {
@@ -299,15 +291,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.StartConversation(ctx, operations.StartConversationRequest{
-        ConversationStart: &shared.ConversationStart{
-            Documents: []shared.Documents{
-                shared.Documents{},
-            },
-            Recipients: []string{
-                "string",
-            },
-            Subject: "string",
-        },
         SpaceID: "string",
     })
     if err != nil {
