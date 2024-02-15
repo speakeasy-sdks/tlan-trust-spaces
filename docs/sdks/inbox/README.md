@@ -35,7 +35,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.DeleteMessageByID(ctx, operations.DeleteMessageByIDRequest{
-        MessageID: "string",
+        MessageID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,7 +86,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.GetConversationByID(ctx, operations.GetConversationByIDRequest{
-        ConversationID: "string",
+        ConversationID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -137,7 +137,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.GetMessageByID(ctx, operations.GetMessageByIDRequest{
-        MessageID: "string",
+        MessageID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -188,7 +188,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.ListConversationsBySpaceID(ctx, operations.ListConversationsBySpaceIDRequest{
-        SpaceID: "string",
+        SpaceID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -240,7 +240,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.ReplyToConversation(ctx, operations.ReplyToConversationRequest{
-        ConversationID: "string",
+        ConversationID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -291,7 +291,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inbox.StartConversation(ctx, operations.StartConversationRequest{
-        SpaceID: "string",
+        SpaceID: "<value>",
     })
     if err != nil {
         log.Fatal(err)

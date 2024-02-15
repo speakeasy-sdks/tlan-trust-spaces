@@ -33,7 +33,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.DownloadDocumentByID(ctx, operations.DownloadDocumentByIDRequest{
-        DocumentID: "string",
+        DocumentID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -84,7 +84,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.GetDocumentByID(ctx, operations.GetDocumentByIDRequest{
-        DocumentID: "string",
+        DocumentID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -135,7 +135,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Repository.GetFolderByID(ctx, operations.GetFolderByIDRequest{
-        FolderID: "string",
+        FolderID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -234,7 +234,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Repository.UploadDocument(ctx, &operations.UploadDocumentRequestBody{
         Attributes: operations.Attributes{
-            FolderID: "string",
+            FolderID: "<value>",
         },
         Document: operations.Document{
             Content: []byte("0xaAFa6d8bD5"),

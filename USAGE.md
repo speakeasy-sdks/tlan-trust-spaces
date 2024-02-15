@@ -17,7 +17,7 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Repository.DownloadDocumentByID(ctx, operations.DownloadDocumentByIDRequest{
-		DocumentID: "string",
+		DocumentID: "<value>",
 	})
 	if err != nil {
 		log.Fatal(err)
