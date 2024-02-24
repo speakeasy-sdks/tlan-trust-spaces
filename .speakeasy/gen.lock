@@ -4,18 +4,18 @@ management:
   docChecksum: d2d88ca564586090f38734cd280879b0
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.263.3
-  releaseVersion: 3.1.1
-  configChecksum: 56c8f87cbe502e4776c67c38edeec077
+  generationVersion: 2.272.4
+  releaseVersion: 3.1.2
+  configChecksum: ab9fab3082e49d4ebaec647cdffb0435
   repoURL: https://github.com/speakeasy-sdks/tlan-trust-spaces.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/tlan-trust-spaces
   published: true
 features:
   go:
-    core: 3.4.1
+    core: 3.4.3
     downloadStreams: 0.1.1
-    globalSecurity: 2.82.6
+    globalSecurity: 2.82.7
     globalServerURLs: 2.82.1
 generatedFiles:
   - repository.go
