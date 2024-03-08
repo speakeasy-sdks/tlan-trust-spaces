@@ -38,7 +38,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Stream != nil {
         // handle response
     }
@@ -89,7 +88,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Object != nil {
         // handle response
     }
@@ -140,7 +138,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.FolderListing != nil {
         // handle response
     }
@@ -188,7 +185,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.SpaceList != nil {
         // handle response
     }
@@ -244,7 +240,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Object != nil {
         // handle response
     }

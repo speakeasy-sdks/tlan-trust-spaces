@@ -25,7 +25,6 @@ import(
 	"context"
 	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -40,8 +39,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -91,7 +89,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Conversation != nil {
         // handle response
     }
@@ -142,7 +139,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Message != nil {
         // handle response
     }
@@ -193,7 +189,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Inbox != nil {
         // handle response
     }
@@ -230,7 +225,6 @@ import(
 	"context"
 	"tlan-trust-spaces/v3/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -245,8 +239,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -296,7 +289,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ConversationStartResponse != nil {
         // handle response
     }
