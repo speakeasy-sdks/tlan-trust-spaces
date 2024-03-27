@@ -146,9 +146,9 @@ func New(opts ...SDKOption) *TlanTrustSpaces {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "3.2.2",
-			GenVersion:        "2.283.1",
-			UserAgent:         "speakeasy-sdk/go 3.2.2 2.283.1 1.0.0 tlan-trust-spaces",
+			SDKVersion:        "3.2.3",
+			GenVersion:        "2.291.0",
+			UserAgent:         "speakeasy-sdk/go 3.2.3 2.291.0 1.0.0 tlan-trust-spaces",
 			Hooks:             hooks.New(),
 		},
 	}
